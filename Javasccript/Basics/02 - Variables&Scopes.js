@@ -73,8 +73,8 @@ functionAndScopes();
 
 // Guess results before execute
 
-console.log(d); // On aura "UNDEFINED" malgré le fait que var sera hoisté car "Hoistées" veut dire que leurs déclarations sont deplacées en haut du scope,
-// mais pas l'initialisation...
+console.log(d); // We'll get "undefined" even though var is hoisted, because "hoisted" means the declarations are moved to the top of the scope,
+// but not the initialization...
 
 var d = 5;
 
