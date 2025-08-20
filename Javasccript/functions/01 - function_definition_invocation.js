@@ -36,11 +36,13 @@ console.log(greet3("Charlie"));
 
 // Shorter syntax, behaves differently with "this" (we'll see later)
 
-// =================================
-// EXERCICES - BEGINNER -> PRO-LEVEL
-// =================================
+// ================================================================================
+//                              EXERCICES - BEGINNER -> PRO-LEVEL
+// ================================================================================
 
+// ================
 // Level 1 – Basics
+// ================
 
 // Write a function sayHello that takes no parameter and returns "Hello World!".
 
@@ -69,7 +71,9 @@ console.log(isEvenVerbose(5));
 const greet4 = (name) => `Hello, ${name}`;
 console.log(greet4("Arnaud"));
 
+// =============================
 // Level 2 – Parameters & Return
+// =============================
 
 // Write a function multiply that multiplies three numbers.
 
@@ -104,7 +108,9 @@ const reverseStringV2 = (str) => {
 console.log(reverseString("Arnaud"));
 console.log(reverseStringV2("Arnaud"));
 
+// ===============================
 // Level 3 – Functions with Arrays
+// ===============================
 
 // Write a function sumArray that returns the sum of all numbers in an array.
 
@@ -129,6 +135,7 @@ const averageArray = (arr) =>
 console.log(averageArray([1, 2, 3, 4, 5, 6]));
 
 // Write a function countEvenNumbers that counts how many numbers in an array are even.
+
 const countEvenNumbers = (arr) => {
   let count = 0;
 
@@ -185,3 +192,27 @@ console.log(nums);
 const findInArray = (arr, func) => arr.find(func);
 
 console.log(findInArray([1, 2, 3, 4], (n) => n > 2));
+
+// =============================
+// Level 5 -Advanced & Recursion
+// =============================
+
+// Write a recursive function factorial(n) that returns n!.
+
+function factorial(n) {
+  if (n === 0) {
+    return 1;
+  }
+
+  return n * factorial(n - 1);
+}
+
+console.log(factorial(5));
+
+// Write a recursive function fibonacci(n) that returns the nth Fibonacci number.
+
+// Write a function isPalindrome that checks if a string is a palindrome.
+//
+// Write a recursive function sumDigits(n) that sums all digits of a number.
+//
+// Write a function deepFlatten that takes a nested array and returns it flattened into a single array.
