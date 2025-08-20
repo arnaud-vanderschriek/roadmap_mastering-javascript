@@ -132,7 +132,7 @@ console.log(averageArray([1, 2, 3, 4, 5, 6]));
 const countEvenNumbers = (arr) => {
   let count = 0;
 
-  arr.foreach((elem) => {
+  arr.forEach((elem) => {
     if (elem % 2 == 0) ++count;
   });
 
@@ -145,4 +145,43 @@ const countEvenNumbersV2 = (arr) =>
 console.log(countEvenNumbers([1, 2, 3, 4, 5]));
 console.log(countEvenNumbersV2([1, 2, 3, 4, 5]));
 
+// =========================================================
+// Level 4 – Higher Order Functions (functions as arguments)
+// =========================================================
 
+// Write a function applyFunction that takes a function and a value,
+// and returns the result of applying the function to the value.
+
+const square2 = (n) => n ** 2;
+const applyFunction = (func, value) => func(value);
+
+console.log(applyFunction(square2, 5));
+
+// Write a function mapArray that takes an array and a function, and returns a new array where the function is applied to every element.
+
+const mapArray = (arr, func) => arr.map(func);
+
+console.log(mapArray([1, 2, 3, 4, 5], (n) => n * 2));
+console.log(mapArray([1, 2, 3, 4, 5], (n) => n ** 2));
+
+// Write a function filterArray that takes an array and a function, and returns only the elements that pass the test.
+
+const filterArray = (arr, func) => arr.filter(func);
+
+console.log(filterArray([1, 2, 3, 4, 5], (elem) => elem % 2 === 0));
+console.log(filterArray([1, 2, 3, 4, 5], (elem) => elem % 2 !== 0));
+
+// Write a function forEachArray that mimics the behavior of forEach.
+
+const forEachArray = (arr, func) => arr.forEach(func);
+
+const nums = [1, 2, 3, 4, 5];
+
+forEachArray(nums, (elem, i, arr) => (arr[i] = elem * 2));
+console.log(nums);
+
+// Write a function findInArray that mimics the behavior of find.
+
+const findInArray = (arr, func) => arr.find(func);
+
+console.log(findInArray([1, 2, 3, 4], (n) => n > 2));
