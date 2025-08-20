@@ -250,3 +250,15 @@ console.log(fizzBuzz3(15)); // FIZZBUZZ
 console.log(fizzBuzz3(9)); // FIZZ
 console.log(fizzBuzz3(10)); // BUZZ
 console.log(fizzBuzz3(7)); // 7
+
+// full FizzBuzz sequence from 1 to n
+
+const fizzBuzzSeq = (n) =>
+  [...Array(n)].map((_, i) => {
+    const num = i + 1;
+    console.log(
+      `${num % 3 === 0 ? "FIZZ" : ""}${num % 5 === 0 ? "BUZZ" : ""}` || num
+    );
+  });
+
+fizzBuzzSeq(15);
