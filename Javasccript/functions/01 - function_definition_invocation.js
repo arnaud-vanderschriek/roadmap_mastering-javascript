@@ -211,8 +211,22 @@ console.log(factorial(5));
 
 // Write a recursive function fibonacci(n) that returns the nth Fibonacci number.
 
-// Write a function isPalindrome that checks if a string is a palindrome.
-//
 // Write a recursive function sumDigits(n) that sums all digits of a number.
-//
+
+function sumDigits(n) {
+  if (n === 0) return 0;
+  return (n % 10) + sumDigits(Math.floor(n / 10));
+}
+
+console.log(sumDigits(123));
+
+// Write a recursive function countDigits(n) that count the number of digits in a number.
+function countDigits(n) {
+  if (n === 0) return 0;
+
+  return 1 + countDigits(Math.floor(n / 10));
+}
+
+console.log(countDigits(123));
+
 // Write a function deepFlatten that takes a nested array and returns it flattened into a single array.
