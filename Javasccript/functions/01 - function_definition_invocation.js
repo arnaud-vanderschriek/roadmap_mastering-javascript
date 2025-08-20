@@ -240,3 +240,17 @@ function deeFlatten(arr) {
 }
 
 console.log(deeFlatten([1, 2, 3, [4, 5, 6], 7]));
+
+// =======================
+// Level 6 – Pro Challenge
+// =======================
+
+// Write a function memoize(fn) that caches the results of function calls for performance.
+
+// Write a function compose(f, g) that returns a new function equivalent to f(g(x)).
+
+// Write a function curry(fn) that transforms a function with multiple arguments into a series of functions with one argument.
+
+// Write a function debounce(fn, delay) that delays invoking fn until after delay ms have passed since the last call.
+
+// Write a function throttle(fn, delay) that ensures fn is called at most once every delay ms.
