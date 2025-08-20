@@ -262,3 +262,33 @@ const fizzBuzzSeq = (n) =>
   });
 
 fizzBuzzSeq(15);
+
+//========================
+// LEVEL 05 - INTERMEDIATE
+//========================
+
+// Palindrome Checker
+// Write a function that checks if a word is a palindrome (same forwards and bacwards).
+// Examples: "radar" -> true, "hello" -> false
+
+function isPalindrome(str) {
+  str = str.toLowerCase();
+
+  for (let i = 0, j = str.length - 1; i <= j; ++i, --j) {
+    if (str[i] !== str[j]) return false;
+  }
+
+  return true;
+}
+
+console.log(isPalindrome("AradddarA"));
+
+// compact ES6 arrow function version
+
+const isPalindromeV2 = (str) => {
+  str = str.toLowerCase();
+  return [...str].every((char, i) => char === str[str.length - 1 - i]);
+};
+
+console.log(isPalindromeV2("radar"));
+console.log(isPalindromeV2("hello"));
