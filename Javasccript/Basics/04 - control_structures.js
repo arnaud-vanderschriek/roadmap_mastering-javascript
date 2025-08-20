@@ -290,5 +290,5 @@ const isPalindromeV2 = (str) => {
   return [...str].every((char, i) => char === str[str.length - 1 - i]);
 };
 
-console.log(isPalindromeV2("radar"));
-console.log(isPalindromeV2("hello"));
+console.log("1: ", isPalindromeV2("radar"));
+console.log("2: ", isPalindromeV2("hello"));
