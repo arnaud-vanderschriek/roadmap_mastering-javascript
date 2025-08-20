@@ -114,14 +114,15 @@ console.log(reduction(120, 20, true));
 console.log(reduction2(120, 20, true));
 console.log(reduction3(120, 20, true));
 
+
 //----------------------------------------------------------------------------------
-//    SHORT REMINDER DIFFERENCE BETWEEN CLASSIC FUNCTION AND ARROW FUNCTION
+//     SHORT REMINDER DIFFERENCE BETWEEN CLASSIC FUNCTION AND ARROW FUNCTION
 //----------------------------------------------------------------------------------
 
 /*
-================================================
+===============================
 Classic Function vs Arrow Function in JavaScript
-================================================
+===============================
 */
 
 // 1. SYNTAX
@@ -132,8 +133,9 @@ function classic(a, b) {
 const arrow = (a, b) => a + b;
 
 console.log(classic(2, 3)); // 5
-console.log(arrow(2, 3)); // 5
+console.log(arrow(2, 3));   // 5
 // -> In this case, both work the same
+
 
 // 2. "this" BEHAVIOR
 const obj = {
@@ -149,10 +151,11 @@ const obj = {
 };
 
 obj.classicFn(); // classicFn this.value: 10
-obj.arrowFn(); // arrowFn this.value: undefined (arrow doesn’t bind "this")
+obj.arrowFn();   // arrowFn this.value: undefined (arrow doesn’t bind "this")
 
 // -> Classic functions bind "this" to the object calling them
 // -> Arrow functions don’t have their own "this", they use the one from outside
+
 
 // 3. ARGUMENTS OBJECT
 function classicArgs(a, b) {
@@ -169,6 +172,7 @@ classicArgs(1, 2);
 // -> Classic functions have "arguments"
 // -> Arrow functions don’t (use ...rest instead)
 
+
 // 4. CONSTRUCTORS
 function ClassicConstructor(name) {
   this.name = name;
@@ -183,6 +187,7 @@ const ArrowConstructor = (name) => {
 
 // -> Classic functions can be used with "new"
 // -> Arrow functions cannot
+
 
 // 5. BEST USE CASES
 // - Classic functions: methods inside objects/classes, constructors, when you need "this"
