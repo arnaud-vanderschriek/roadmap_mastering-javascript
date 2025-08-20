@@ -230,3 +230,13 @@ function countDigits(n) {
 console.log(countDigits(123));
 
 // Write a function deepFlatten that takes a nested array and returns it flattened into a single array.
+
+function deeFlatten(arr) {
+  return arr.reduce(
+    (acc, elem) =>
+      Array.isArray(elem) ? acc.concat(deeFlatten(elem)) : acc.concat(elem),
+    []
+  );
+}
+
+console.log(deeFlatten([1, 2, 3, [4, 5, 6], 7]));
