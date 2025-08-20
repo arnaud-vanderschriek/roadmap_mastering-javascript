@@ -198,3 +198,55 @@ for (let item in car) {
 // brand: Toyota
 // year: 2020
 // color: blue
+
+// =========================
+// LEVEL 04 - COMBINED LOGIC
+// =========================
+
+// Write a function that prints numbers from 1 to 30;
+
+// if divisible by 3 -> print "FIZZ";
+// if divisible by 5 -> print "BUZZ";
+// if divisible by both -> print "FIZZBUZZ";
+
+function fizzBuzz(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return "FIZZBUZZ";
+  } else if (number % 3 === 0) {
+    return "FIZZ";
+  } else if (number % 5 === 0) {
+    return "BUZZ";
+  } else {
+    return number;
+  }
+}
+
+function fizzBuzzSequence(n) {
+  for (let i = 1; i <= n; ++i) {
+    console.log(fizzBuzz(i));
+  }
+}
+
+// version with ternary
+
+const fizzBuzz2 = (number) => {
+  return number % 3 === 0 && number % 5 === 0
+    ? "FIZZBUZZ"
+    : number % 3 === 0
+    ? "FIZZ"
+    : number % 5 === 0
+    ? "BUZZ"
+    : number;
+};
+
+console.log("fizzbuzz3:", fizzBuzz2(5));
+
+// version using template literal and arrow function
+
+const fizzBuzz3 = (n) =>
+  `${n % 3 === 0 ? "FIZZ" : ""}${n % 5 === 0 ? "BUZZ" : ""}` || n;
+
+console.log(fizzBuzz3(15)); // FIZZBUZZ
+console.log(fizzBuzz3(9)); // FIZZ
+console.log(fizzBuzz3(10)); // BUZZ
+console.log(fizzBuzz3(7)); // 7
